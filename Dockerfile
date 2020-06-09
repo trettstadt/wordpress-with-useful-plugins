@@ -9,7 +9,6 @@ RUN set -eux; \
 
 RUN set -ex; \
     curl -o w3-total-cache.zip -fSL "https://downloads.wordpress.org/plugin/w3-total-cache.0.14.1.zip"; \
-    mkdir -p /var/www/html/wp-content/plugins; \
-    unzip w3-total-cache.zip -d /var/www/html/wp-content/plugins; \
+    unzip w3-total-cache.zip -d /usr/src/wordpress/wp-content/plugins; \
     rm w3-total-cache.zip; \
-    chown -R www-data:www-data /var/www/html/wp-content/plugins/w3-total-cache
+    chown -R www-data:www-data /usr/src/wordpress/wp-content/plugins/w3-total-cache
